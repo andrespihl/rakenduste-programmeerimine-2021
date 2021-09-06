@@ -1,15 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import {Route} from 'react-router-dom';
+import Home from './pages/Home'
+import Cart from './pages/Cart'
+import AddItem from './pages/AddItem'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Mothertrucker.
-        </p>
-      </header>
+    <div ClassName="App">
+    <div>
+      <Route path="/" exact>
+        <Home />
+      </Route>
+    </div>
+    <div>
+        <Route path="/" exact>
+         <Cart />
+       </Route>
+    </div>
+    <div>
+      <Route path="/" exact>
+        <AddItem />
+      </Route>
+    </div>
     </div>
   );
 }
